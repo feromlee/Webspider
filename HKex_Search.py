@@ -5,8 +5,8 @@ import re
 
 
 class HKex_Search:
-    URL = "https://www.hkexnews.hk/sdw/search/searchsdw_c.aspx"
-
+    URL = "https://www3.hkexnews.hk/sdw/search/searchsdw_c.aspx"
+    
     def __init__(self):
         self.session = requests_html.HTMLSession()
 

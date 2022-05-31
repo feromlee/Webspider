@@ -38,8 +38,8 @@ class HKex_Search:
         '''
         因为HKEX不添加__VIEWSTATE也可以获得数据，因此我这里就只给三个参数就OK,其他忽略掉
         '''
-        session = HTMLSession()
-        URL = 'https://www.hkexnews.hk/sdw/search/searchsdw_c.aspx'
+        #session = HTMLSession()
+        #URL = 'https://www.hkexnews.hk/sdw/search/searchsdw_c.aspx'
 
         col_participant_id = 1
         col_participant_name = 3
@@ -70,7 +70,7 @@ class HKex_Search:
         }
 
         response = self.session.post(self.URL, data=postdata, verify=False)
-        print(response.html.html)
+        #print(response.html.html)
 
         content = response.html.find('tbody', first=True)
         if content!=None:
